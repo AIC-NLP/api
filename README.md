@@ -1,11 +1,12 @@
-#Install Rerquirments
+# Install Rerquirments
 :shipit:
-'''
-pip3 install requirments.txt
-'''
 
-#Run API
+```
+pip install requirments.txt
+```
 
-'''
+# Run API
+
+```
 python app.py
-'''
+```
