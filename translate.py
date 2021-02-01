@@ -1,3 +1,10 @@
+from fairseq.models.transformer import TransformerModel
+from tqdm import tqdm
+from farasa.segmenter import FarasaSegmenter
+import pandas as pd
+import numpy as np
+
+
 class Translator():
     def __init__(self):
         self.data={"zh":"I am chinese",
