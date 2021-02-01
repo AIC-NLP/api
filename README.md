@@ -1,5 +1,4 @@
-# Install Rerquirments
-:shipit:
+# Install Rerquirments :shipit:
 
 ```
 pip install requirments.txt
