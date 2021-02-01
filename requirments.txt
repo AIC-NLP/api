@@ -2,3 +2,4 @@ flask
 config
 fairseq
 farasapy
+numpy
