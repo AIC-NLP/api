@@ -1,8 +1,6 @@
 from fairseq.models.transformer import TransformerModel
 from tqdm import tqdm
 from farasa.segmenter import FarasaSegmenter
-import pandas as pd
-import numpy as np
 import re
 
 
