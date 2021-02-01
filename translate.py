@@ -7,18 +7,18 @@ class Translator():
     def __init__(self):
         self.langs = ["zh -> ar" , "ar -> zh", "ar -> fr" , "fr -> ar"]
         self.model_ar2zh = TransformerModel.from_pretrained(
-                "/home/nlp-mt-rowan-api/mt-api/checkpoints/checkpoints_ar2zh",
+                "checkpoints_ar2zh",
                 checkpoint_file='checkpoint_best.pt',
-                data_name_or_path='/home/nlp-mt-rowan-api/mt-api/data-bin',
+                data_name_or_path='data-bin',
                 bpe='subword_nmt',
-                bpe_codes='/home/nlp-mt-rowan-api/mt-api/data-bin/code')
+                bpe_codes='data-bin/code')
         
         self.model_zh2ar = TransformerModel.from_pretrained(
-                "/home/nlp-mt-rowan-api/mt-api/checkpoints/checkpoints_zh2ar",
+                "checkpoints_zh2ar",
                 checkpoint_file='checkpoint_best.pt',
-                data_name_or_path='/home/nlp-mt-rowan-api/mt-api/data-bin',
+                data_name_or_path='data-bin',
                 bpe='subword_nmt',
-                bpe_codes='/home/nlp-mt-rowan-api/mt-api/data-bin/code')
+                bpe_codes='data-bin/code')
             
         self.segmenter = FarasaSegmenter(interactive=True)
         self.models = {
