@@ -8,9 +8,17 @@ translator = Translator()
 
 app.config["DEBUG"] = True 
 
-# @app.route('/', methods=["GET"])
+@app.route('/', methods=["GET"])
+def available():
+    support = "/supported_languages"
+    translate = "/translate"
+    return jsonify({"supported languages - GET": support, "translate - POST": translate})
 
-# @app.route('/lang_routes', methods = ["GET"])
+@app.route('/supported_languages', methods=["GET"])
+def get_supported():
+    languages = translator.supported_languages()
+    return jsonify({"supported languages": languages})
+
 
 # @app.route('/supported_languages', methods=["GET"])
 
