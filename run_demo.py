@@ -1,7 +1,7 @@
 import requests
 import json
 
-translation_api_url= 'http://52.168.2.102:5000/translate'
+translation_api_url= 'http://MT_API/translate'
 
 def translate_request(txt, src, tgt):
     payload = {"text":txt,  "source":src,  "target":tgt}
